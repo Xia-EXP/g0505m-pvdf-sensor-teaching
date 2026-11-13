@@ -1,0 +1,8 @@
+{
+  "range_kg": 5,
+  "interval_ms": 50,
+  "global_zero_g": 20,
+  "zero_deadband_g": 3,
+  "software_version": "V.2026-8-7M-r5",
+  "hand": "R"
+}

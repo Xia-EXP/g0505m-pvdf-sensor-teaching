@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-10-11T16:07:59.549280",
+  "port": "COM3",
+  "duration_seconds": 1800.063,
+  "target_seconds": 1800.0,
+  "completed_duration": true,
+  "stats": {
+    "received_bytes": 147605,
+    "valid_frames": 2785,
+    "checksum_errors": 0,
+    "invalid_hand": 0,
+    "discarded_bytes": 0
+  },
+  "max_ui_callback_gap_ms": 125.0,
+  "stale_checks": 10,
+  "checks": 16457,
+  "max_channel_g": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "errors": [],
+  "query_saved": true,
+  "screenshot_saved": true,
+  "hardware_acceptance": "serial_stream_only",
+  "pending": [
+    "25点位置与左右实物对应",
+    "按住与释放操作确认",
+    "空载归零操作确认",
+    "真实USB拔插",
+    "夹具定量误差"
+  ],
+  "recording": "C:\\Users\\ROG\\Documents\\ChatGPT\\压力传感器\\release\\G0505M30分钟实物记录_20261011_153759",
+  "recording_audit": {
+    "csv_frames": 33222,
+    "recorded_duration_seconds": 1659.84989,
+    "max_host_frame_gap_ms": 376.383,
+    "nonzero_frames": 0,
+    "files_consistent": true,
+    "recorded_stats": {
+      "received_bytes": 1761004,
+      "valid_frames": 33222,
+      "checksum_errors": 0,
+      "invalid_hand": 0,
+      "discarded_bytes": 238
+    },
+    "final_parser_reset_detected": true,
+    "continuous_serial_pass": false,
+    "incomplete_reasons": [
+      "原始录制时长不足目标，录制提前停止",
+      "检查后段解析计数重置或数据源改变，原因未核实",
+      "检查期间出现数据过期"
+    ]
+  },
+  "continuous_serial_pass": false,
+  "stats_scope": "final_parser_only"
+}

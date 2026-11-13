@@ -1,0 +1,60 @@
+{
+  "automated_tests": 109,
+  "test_failures": 0,
+  "portable": {
+    "mode": "demo",
+    "valid_frames": 90,
+    "visible": true,
+    "width": 1277,
+    "height": 800,
+    "source_label": "示例数据 · 非实物",
+    "hardware_acceptance": false,
+    "zip_entries": 366,
+    "extracted_to": "C:\\Users\\ROG\\Documents\\ChatGPT\\压力传感器\\tmp\\便携校验 中文 空格 1791707771950608200",
+    "canvas_colors": 269,
+    "exe_exit_code": 0,
+    "source_environment_removed": true,
+    "system_only_path": true,
+    "platforms": {
+      "offscreen": {
+        "exe_exit_code": 0,
+        "valid_frames": 91,
+        "canvas_colors": 324
+      },
+      "windows": {
+        "exe_exit_code": 0,
+        "valid_frames": 90,
+        "canvas_colors": 269
+      }
+    },
+    "exe_sha256": "9a0f87eb57cb4eb5738aa6e91c197dc0866c0005c05296ea649c9edd199b5785"
+  },
+  "source": {
+    "extracted_to": "C:\\Users\\ROG\\Documents\\ChatGPT\\压力传感器\\tmp\\源码校验 中文 空格 1791707780470069300",
+    "tests": 80,
+    "isolated_python": true,
+    "project_pth_disabled": true,
+    "source_import": "extracted_zip_only",
+    "dependencies": "build_environment_third_party_only",
+    "smoke": {
+      "mode": "demo",
+      "valid_frames": 91,
+      "visible": true,
+      "width": 1120,
+      "height": 800,
+      "source_label": "示例数据 · 非实物",
+      "hardware_acceptance": false
+    }
+  },
+  "real_exe_smoke": {
+    "mode": "serial",
+    "valid_frames": 89,
+    "visible": true,
+    "width": 1120,
+    "height": 800,
+    "source_label": "USB-TTL 实时",
+    "hardware_acceptance": false
+  },
+  "continuous_serial_pass": false,
+  "full_hardware_acceptance": false
+}

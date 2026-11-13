@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- G0505M 桌角卡：单张 100×70 mm，A4 一页排 8 张（2 列 × 4 行），沿虚线裁切；由 build_print.py 转 PDF。 -->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>G0505M 桌角卡 v2.0</title>
+<style>
+  /* 作用：零页边距，用固定毫米尺寸排版，打印时选“实际大小”才能保证每张 100×70 mm。 */
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Microsoft YaHei", "微软雅黑", sans-serif; }
+  .sheet { width: 210mm; height: 297mm; padding: 8.5mm 5mm; display: grid;
+    grid-template-columns: 100mm 100mm; grid-template-rows: repeat(4, 70mm); justify-content: center; }
+  .card { width: 100mm; height: 70mm; outline: 0.2mm dashed #9aa9b4; outline-offset: -0.1mm; padding: 4.5mm 5mm 3.5mm;
+    display: flex; flex-direction: column; color: #1d2b36; }
+  .head { display: flex; align-items: center; gap: 2.5mm; border-bottom: 0.6mm solid #1fb5a8; padding-bottom: 1.6mm; }
+  .head .t { font-size: 12.5pt; font-weight: 700; color: #0e1620; }
+  .head .s { font-size: 7pt; color: #5f7382; margin-left: auto; }
+  .dot { width: 4.2mm; height: 4.2mm; border-radius: 50%; background: radial-gradient(circle, #f07a3a 35%, #f5c54266 36%, transparent 70%); }
+  ol { list-style: none; }
+  li { display: flex; gap: 2mm; font-size: 9pt; line-height: 1.45; margin-bottom: 2.2mm; }
+  li b.n { flex: none; width: 4.4mm; height: 4.4mm; border-radius: 50%; background: #1fb5a8; color: #fff; font-size: 7pt;
+    text-align: center; line-height: 4.4mm; margin-top: 0.3mm; }
+  .legend { display: flex; align-items: center; gap: 1.5mm; font-size: 7pt; color: #5f7382; margin: 0 0 1.2mm 6.4mm; }
+  .hint { font-size: 7.2pt; color: #5f7382; margin-left: 6.4mm; }
+  .bar { width: 26mm; height: 2.2mm; border-radius: 1.1mm; background: linear-gradient(90deg, #283848, #1cb2a6, #f5c542, #f07a3a, #e8434a); }
+  .keys { margin-top: auto; font-size: 7.4pt; color: #12707a; }
+  kbd { font-family: Consolas, monospace; border: 0.25mm solid #9fc9c6; border-radius: 0.8mm; padding: 0 0.8mm; background: #eef8f7; }
+  .body { display: flex; gap: 3mm; margin-top: 2mm; flex: 1; min-height: 0; }
+  .body .left { flex: 1; }
+  .body img { height: 36mm; border-radius: 1.5mm; align-self: center; }
+  .warn { font-size: 6.6pt; color: #8a5a12; background: #fff6df; border-radius: 1mm; padding: 0.8mm 1.6mm; margin-top: 1.2mm; }
+</style>
+</head>
+<body>
+<div class="sheet" id="sheet"></div>
+<template id="card">
+  <div class="card">
+    <div class="head"><span class="dot"></span><span class="t">手掌受力教具 · 三步上手</span><span class="s">GT-G0505M v2.0</span></div>
+    <div class="body">
+      <div class="left">
+        <ol>
+          <li><b class="n">1</b><span>插好 USB，双击<br>「<b>启动G0505M教具</b>」</span></li>
+          <li><b class="n">2</b><span>右上角选串口 → 点「<b>连接</b>」<br>没设备就点「<b>示例</b>」</span></li>
+          <li><b class="n">3</b><span>戴好手套按压<br><b>颜色越红 = 该点受力越大</b></span></li>
+        </ol>
+        <div class="legend">轻 <span class="bar"></span> 重</div>
+        <div class="hint">松手后点「空载归零」再测</div>
+      </div>
+      <img src="../assets/manual/card-hand.png" alt="手掌热点">
+    </div>
+    <div class="keys"><kbd>空格</kbd> 冻结　<kbd>Z</kbd> 归零　<kbd>P</kbd> 清峰值　<kbd>←→</kbd> 换点　<kbd>F11</kbd> 全屏</div>
+    <div class="warn">读数为厂家估算 g，25 点之和≠整手握力 · 勿用尖物按压、勿拉扯排线</div>
+  </div>
+</template>
+<script>
+  // 作用：同一张卡片复制 8 份填满 A4，只维护一份内容，避免各张文字不一致。
+  const sheet = document.getElementById("sheet");
+  const card = document.getElementById("card").content;
+  for (let i = 0; i < 8; i++) sheet.appendChild(card.cloneNode(true));
+</script>
+</body>
+</html>

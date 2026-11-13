@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">LDT0-028K、PVA103 与 Raspberry Pi Pico 接线方向图</title>
+  <desc id="desc">传感器屏蔽线黑线接 PVA103 输入负端，PVA103 使用 3.3 伏供电，OUT 经过 2.2 千欧到 Pico GP26，100 纳法电容从 GP26 接地，TTL 不接。</desc>
+  <rect width="1200" height="720" fill="#f7fafc"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#172033">实物方向与逐针接线示意</text>
+  <text x="600" y="70" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="15" fill="#526078">元件面朝上；不同批次连接器方向可能变化，最终必须以 PCB 丝印为准</text>
+
+  <g id="sensor">
+    <rect x="45" y="205" width="235" height="185" rx="18" fill="#ffffff" stroke="#8aa0b8" stroke-width="2"/>
+    <text x="162" y="238" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="700" fill="#172033">LDT0-028K</text>
+    <rect x="83" y="265" width="158" height="72" rx="8" fill="#e8eef5" stroke="#73869b"/>
+    <rect x="99" y="279" width="126" height="42" rx="4" fill="#bfcbd8"/>
+    <text x="162" y="365" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#526078">原厂屏蔽线版</text>
+    <line x1="241" y1="286" x2="330" y2="286" stroke="#d49700" stroke-width="7"/>
+    <line x1="241" y1="316" x2="330" y2="316" stroke="#20252b" stroke-width="7"/>
+    <text x="250" y="274" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#8a6500">非黑色信号线</text>
+    <text x="250" y="344" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#20252b">黑线 / 屏蔽端（负端）</text>
+  </g>
+
+  <g id="pva103">
+    <rect x="330" y="145" width="315" height="345" rx="22" fill="#1665a7" stroke="#0c3f6b" stroke-width="3"/>
+    <text x="487" y="180" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#ffffff">PVA103 元件面</text>
+    <rect x="430" y="208" width="112" height="54" rx="5" fill="#2f9bdf" stroke="#d7efff"/>
+    <text x="486" y="240" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#ffffff">增益电位器</text>
+    <path d="M 450 279 A 47 47 0 0 1 522 279" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <path d="M 520 271 L 526 281 L 514 282 Z" fill="#ffffff"/>
+    <text x="486" y="306" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#ffffff">顺时针增大；逆时针减小</text>
+
+    <circle cx="350" cy="286" r="8" fill="#e9edf2" stroke="#172033"/>
+    <circle cx="350" cy="316" r="8" fill="#e9edf2" stroke="#172033"/>
+    <text x="374" y="291" font-family="Consolas, monospace" font-size="17" fill="#ffffff">IN+</text>
+    <text x="374" y="321" font-family="Consolas, monospace" font-size="17" fill="#ffffff">GND / -IN</text>
+
+    <circle cx="625" cy="337" r="8" fill="#f25151"/>
+    <circle cx="625" cy="377" r="8" fill="#f0c64f"/>
+    <circle cx="625" cy="417" r="8" fill="#b9c4cf"/>
+    <circle cx="625" cy="457" r="8" fill="#242b33" stroke="#ffffff"/>
+    <text x="600" y="342" text-anchor="end" font-family="Consolas, monospace" font-size="17" fill="#ffffff">VCC</text>
+    <text x="600" y="382" text-anchor="end" font-family="Consolas, monospace" font-size="17" fill="#ffffff">OUT</text>
+    <text x="600" y="422" text-anchor="end" font-family="Consolas, monospace" font-size="17" fill="#ffffff">TTL</text>
+    <text x="600" y="462" text-anchor="end" font-family="Consolas, monospace" font-size="17" fill="#ffffff">GND</text>
+  </g>
+
+  <g id="pico">
+    <rect x="875" y="115" width="245" height="485" rx="32" fill="#45a97b" stroke="#236d4e" stroke-width="3"/>
+    <rect x="949" y="89" width="97" height="50" rx="8" fill="#cbd3db" stroke="#6c7782" stroke-width="2"/>
+    <rect x="972" y="96" width="51" height="33" rx="4" fill="#5a6470"/>
+    <text x="997" y="162" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Pico 元件面</text>
+    <text x="997" y="184" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#eafff4">Micro-USB 在上方</text>
+
+    <g font-family="Consolas, Microsoft YaHei, monospace" font-size="15">
+      <circle cx="1097" cy="218" r="7" fill="#dd5757"/><text x="1078" y="223" text-anchor="end" fill="#ffffff">40 VBUS 禁止接</text>
+      <circle cx="1097" cy="252" r="7" fill="#d7dee5"/><text x="1078" y="257" text-anchor="end" fill="#ffffff">39 VSYS</text>
+      <circle cx="1097" cy="286" r="9" fill="#242b33" stroke="#ffffff" stroke-width="2"/><text x="1078" y="291" text-anchor="end" fill="#ffffff">38 GND</text>
+      <circle cx="1097" cy="320" r="7" fill="#d7dee5"/><text x="1078" y="325" text-anchor="end" fill="#ffffff">37 3V3_EN</text>
+      <circle cx="1097" cy="354" r="9" fill="#f25151" stroke="#ffffff" stroke-width="2"/><text x="1078" y="359" text-anchor="end" fill="#ffffff">36 3V3(OUT)</text>
+      <circle cx="1097" cy="388" r="7" fill="#d7dee5"/><text x="1078" y="393" text-anchor="end" fill="#ffffff">35 ADC_VREF</text>
+      <circle cx="1097" cy="422" r="7" fill="#d7dee5"/><text x="1078" y="427" text-anchor="end" fill="#ffffff">34 GP28</text>
+      <circle cx="1097" cy="456" r="7" fill="#d7dee5"/><text x="1078" y="461" text-anchor="end" fill="#ffffff">33 AGND</text>
+      <circle cx="1097" cy="490" r="7" fill="#d7dee5"/><text x="1078" y="495" text-anchor="end" fill="#ffffff">32 GP27</text>
+      <circle cx="1097" cy="524" r="9" fill="#f0c64f" stroke="#ffffff" stroke-width="2"/><text x="1078" y="529" text-anchor="end" fill="#ffffff">31 GP26 / ADC0</text>
+    </g>
+  </g>
+
+  <line x1="330" y1="286" x2="350" y2="286" stroke="#d49700" stroke-width="7"/>
+  <line x1="330" y1="316" x2="350" y2="316" stroke="#20252b" stroke-width="7"/>
+
+  <path d="M 633 337 C 755 337 785 354 1097 354" fill="none" stroke="#ef4444" stroke-width="6"/>
+  <text x="744" y="326" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#b32626">3.3 V</text>
+
+  <path d="M 633 457 C 756 457 802 286 1097 286" fill="none" stroke="#242b33" stroke-width="6"/>
+  <text x="681" y="486" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#20252b">共同 GND</text>
+
+  <line x1="633" y1="377" x2="714" y2="377" stroke="#d49700" stroke-width="6"/>
+  <polyline points="714,377 725,365 738,389 751,365 764,389 777,365 790,389 803,377" fill="none" stroke="#8a6500" stroke-width="4"/>
+  <line x1="803" y1="377" x2="832" y2="377" stroke="#d49700" stroke-width="6"/>
+  <circle cx="832" cy="377" r="8" fill="#d49700"/>
+  <path d="M 832 377 C 904 377 935 524 1097 524" fill="none" stroke="#d49700" stroke-width="6"/>
+  <text x="756" y="350" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#8a6500">2.2 kΩ</text>
+
+  <line x1="832" y1="385" x2="832" y2="446" stroke="#6d44b8" stroke-width="5"/>
+  <line x1="812" y1="446" x2="852" y2="446" stroke="#6d44b8" stroke-width="5"/>
+  <line x1="812" y1="459" x2="852" y2="459" stroke="#6d44b8" stroke-width="5"/>
+  <line x1="832" y1="459" x2="832" y2="500" stroke="#242b33" stroke-width="5"/>
+  <path d="M 832 500 C 760 525 704 486 633 457" fill="none" stroke="#242b33" stroke-width="5"/>
+  <text x="858" y="451" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#5e3a9c">100 nF</text>
+  <text x="858" y="471" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#526078">靠近 Pico</text>
+
+  <line x1="633" y1="417" x2="702" y2="417" stroke="#9da8b4" stroke-width="5" stroke-dasharray="9 7"/>
+  <line x1="711" y1="403" x2="735" y2="431" stroke="#d63131" stroke-width="5"/>
+  <line x1="735" y1="403" x2="711" y2="431" stroke="#d63131" stroke-width="5"/>
+  <text x="745" y="422" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#b32626">TTL 不接并绝缘</text>
+
+  <rect x="43" y="545" width="777" height="125" rx="14" fill="#fff5d9" stroke="#d49700" stroke-width="2"/>
+  <text x="65" y="578" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#6f5100">上电前四项复核</text>
+  <text x="65" y="610" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#3f4650">① PVA103 只接 3V3(OUT)，不得接 VBUS　② OUT 必须先经过 2.2 kΩ　③ 100 nF 接在 ADC 一侧对地</text>
+  <text x="65" y="640" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#3f4650">④ 屏蔽线版黑线固定接输入负端；调整接线、结构或电位器前先拔 USB</text>
+</svg>

@@ -1,0 +1,6 @@
+# 运行时依赖：版本范围与 pyproject.toml 保持一致，便于课堂电脑直接安装。
+numpy>=1.26,<3
+PySide6>=6.7,<7
+pyqtgraph>=0.13.7,<0.15
+pyserial>=3.5,<4
+

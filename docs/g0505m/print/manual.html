@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- G0505M 手掌受力教具 2.0 使用说明书：A4 打印版，由 build_print.py 调用 Edge 转 PDF。 -->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>GT-G0505M 手掌受力教具 使用说明书 v2.0</title>
+<style>
+  /* 作用：A4 纵向、页边距留出装订和页码空间。 */
+  @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Microsoft YaHei", "微软雅黑", sans-serif; color: #1d2b36; font-size: 10.5pt; line-height: 1.65; margin: 0; }
+  h1 { font-size: 26pt; margin: 0; color: #0e1620; letter-spacing: 1px; }
+  h2 { font-size: 16pt; margin: 0 0 4mm; padding: 2mm 0 2mm 4mm; border-left: 5px solid #1fb5a8; color: #0e1620; }
+  h3 { font-size: 12pt; margin: 5mm 0 2mm; color: #12707a; }
+  p { margin: 0 0 2.5mm; }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+  img.shot { width: 100%; border-radius: 6px; border: 1px solid #c9d6df; display: block; }
+  .cap { font-size: 9pt; color: #5f7382; text-align: center; margin: 1.5mm 0 4mm; }
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9.8pt; }
+  th { background: #e6f4f3; color: #0e4f55; text-align: left; padding: 2mm 2.5mm; border-bottom: 2px solid #1fb5a8; }
+  td { padding: 1.8mm 2.5mm; border-bottom: 1px solid #dde6ec; vertical-align: top; }
+  .note { background: #fff6df; border: 1px solid #f0c860; border-radius: 6px; padding: 3mm 4mm; margin: 3mm 0; }
+  .warn { background: #fdeceb; border: 1px solid #e8908f; border-radius: 6px; padding: 3mm 4mm; margin: 3mm 0; }
+  .tip { background: #e8f6f5; border: 1px solid #8fd6d0; border-radius: 6px; padding: 3mm 4mm; margin: 3mm 0; }
+  .steps { counter-reset: s; list-style: none; padding: 0; margin: 2mm 0 3mm; }
+  .steps li { counter-increment: s; position: relative; padding: 1.2mm 0 1.2mm 10mm; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 1.2mm; width: 6.5mm; height: 6.5mm; border-radius: 50%;
+    background: #1fb5a8; color: #fff; font-weight: 700; text-align: center; line-height: 6.5mm; font-size: 9.5pt; }
+  .two { display: flex; gap: 6mm; }
+  .two > div { flex: 1; }
+  kbd { font-family: Consolas, monospace; background: #eef3f6; border: 1px solid #c3d0d9; border-bottom-width: 2px; border-radius: 4px; padding: 0 1.8mm; font-size: 9pt; }
+  .cover { display: flex; flex-direction: column; height: 255mm; }
+  .cover .band { background: #0e1620; color: #fff; border-radius: 10px; padding: 12mm 12mm 10mm; }
+  .cover .band h1 { color: #fff; font-size: 30pt; }
+  .cover .band .sub { color: #3dd6d0; font-size: 13pt; margin-top: 2mm; }
+  .cover .band .ver { color: #8aa0b2; font-size: 10pt; margin-top: 6mm; }
+  .cover .hero { margin: 8mm 0 6mm; }
+  .toc { columns: 2; column-gap: 10mm; font-size: 10.5pt; }
+  .toc div { padding: 1mm 0; border-bottom: 1px dotted #c3d0d9; }
+  .legend { height: 4mm; width: 60mm; border-radius: 2mm; display: inline-block; vertical-align: middle;
+    background: linear-gradient(90deg, #283848, #1cb2a6, #f5c542, #f07a3a, #e8434a); }
+  .small { font-size: 9pt; color: #5f7382; }
+  /* 作用：内容较多的页面整体缩小字号和间距，保证一章一页。 */
+  .compact { font-size: 9.6pt; line-height: 1.5; }
+  .compact table { font-size: 9pt; margin: 1mm 0 2.5mm; }
+  .compact td, .compact th { padding: 1.2mm 2mm; }
+  .compact h3 { margin: 3mm 0 1.5mm; }
+  .compact ul { margin: 0 0 2mm; padding-left: 5mm; }
+</style>
+</head>
+<body>
+
+<!-- 封面 -->
+<section class="page cover">
+  <div class="band">
+    <h1>手掌受力教具</h1>
+    <div class="sub">GT-G0505M 25 点压阻手套 · 使用说明书</div>
+    <div class="ver">软件版本 2.0.0 · Windows 10/11 便携版 · 2026 年 10 月</div>
+  </div>
+  <div class="hero"><img class="shot" src="../assets/manual/m-live-hand.png" alt="实时页"></div>
+  <div class="toc">
+    <div>1　认识教具与能力边界</div>
+    <div>2　接线与第一次启动</div>
+    <div>3　实时页：看懂画面</div>
+    <div>4　课堂常用操作</div>
+    <div>5　引导实验</div>
+    <div>6　研究模式：分析与标定</div>
+    <div>7　常见问题排查</div>
+    <div>8　安全、参数与文件说明</div>
+  </div>
+  <div style="flex:1"></div>
+  <p class="small">本说明书中的界面截图除“分析页”外均为软件内置示例数据（界面标注“示例数据 · 非实物”）；分析页使用 2026-10-16 实物记录。</p>
+</section>
+
+<!-- 1 认识教具 -->
+<section class="page">
+  <h2>1　认识教具与能力边界</h2>
+  <p>本教具把 GT-G0505M 手掌受力手套上 25 个感应点的读数实时画在电脑上：哪个位置受力、受力多大、随时间怎么变化，一眼就能看到。适合课堂上观察<b>抓握时力量分布在哪里、轻重变化以及持续用力的过程</b>。</p>
+  <h3>套件组成</h3>
+  <table>
+    <tr><th style="width:30%">部件</th><th>作用</th></tr>
+    <tr><td>压阻感应手套（25 点）</td><td>五指各 4 点（指尖、上段、下段、根部）+ 掌部 5 点</td></tr>
+    <tr><td>转接板 + 10Pin 反向 FPC 排线</td><td>把感应片信号接到采集器；<b>必须是反向排线</b></td></tr>
+    <tr><td>G0505M 采集器（串口版）</td><td>把 25 点换算为厂家估算值 g，每 50 ms 上报一帧</td></tr>
+    <tr><td>USB-TTL 转换器（CH340）</td><td>采集器与电脑之间的串口桥，电脑上显示为 COM 口</td></tr>
+    <tr><td>教具软件（本说明书）</td><td>显示、记录、回放、引导实验、分析和标定</td></tr>
+  </table>
+  <h3>感应点编号</h3>
+  <div class="two">
+    <div><img class="shot" src="../assets/manufacturer-numbering.png" alt="厂家编号图"><div class="cap">厂家编号：1–5 指尖，6–10 上段，11–15 下段，16–20 根部，21–25 掌部</div></div>
+    <div>
+      <p>软件中的编号与厂家完全一致。右手画面是左手的水平镜像，<b>通道编号不变</b>。</p>
+      <p>每一列是同一根手指：1/6/11/16 拇指，2/7/12/17 食指，3/8/13/18 中指，4/9/14/19 无名指，5/10/15/20 小指。</p>
+    </div>
+  </div>
+  <div class="note">
+    <b>能测什么、不能测什么</b><br>
+    ✔ 25 个位置的受力<b>相对大小、分布和随时间的变化</b>，以及持续抓握（压阻材料能保持读数）。<br>
+    ✘ 读数是厂家估算的“g”，<b>不是经过计量的力</b>；25 点相加<b>不等于整手握力</b>；感应点之间的区域没有测量，软件也不会凭空补上。<br>
+    ✘ 不能用读数给学生的握力排名。定量比较必须用研究模式的“已知载荷标定”，且只对标定时的压头面积有效。
+  </div>
+</section>
+
+<!-- 2 接线与启动 -->
+<section class="page">
+  <h2>2　接线与第一次启动</h2>
+  <h3>2.1　接线（断电操作）</h3>
+  <img class="shot" src="../assets/manufacturer-usb-ttl.png" alt="USB-TTL 接线" style="width:80%;margin:0 auto">
+  <div class="cap">厂家串口接线图（资料第 3.6 节）</div>
+  <ol class="steps">
+    <li>转换器 <b>TXD → 采集器 RX</b>，转换器 <b>RXD → 采集器 TX</b>（交叉连接），<b>GND 与 GND 相连</b>。颜色只对配套线有效，换线时以端子标识为准。</li>
+    <li>按厂家要求给采集器供 5 V；不要同时接两路 5 V 电源。</li>
+    <li>感应手套 → 转接板 → 采集器之间用配套<b>反向</b> FPC 排线。插到底、扣好锁扣；方向以连接器内金属触点与排线裸露触点贴合为准。</li>
+    <li>全部接好后再插 USB 上电。<b>不要带电插拔排线。</b></li>
+  </ol>
+  <h3>2.2　启动软件</h3>
+  <div class="two">
+    <div>
+      <ol class="steps">
+        <li>把便携包<b>完整解压</b>（保留 <code>_internal</code> 文件夹），双击 <b>启动G0505M教具.cmd</b>。无需安装 Python。</li>
+        <li>右上角下拉框选择转换器的串口（如 <b>COM3 · USB-SERIAL CH340</b>）。看不到串口时点 <b>↻</b> 刷新；仍没有，请安装 CH340 驱动。</li>
+        <li>点 <b>连接</b>。左上状态灯变绿、显示“数据更新中”即通信正常。<b>不按压时也会持续收到数据。</b></li>
+        <li>采集器上报哪只手，软件会自动切过去；也可以在左下角切换 <b>左手 / 右手</b>。</li>
+      </ol>
+      <div class="tip">没有设备时点 <b>示例</b>，软件循环播放“全手抓握 → 两指捏取 → 掌心下压”，可以先熟悉界面。示例数据会一直标注“非实物”。</div>
+    </div>
+    <div><img class="shot" src="../assets/manual/m-waiting.png" alt="等待界面"><div class="cap">未连接时，手掌中央直接提示下一步</div></div>
+  </div>
+</section>
+
+<!-- 3 实时页 -->
+<section class="page compact">
+  <h2>3　实时页：看懂画面</h2>
+  <img class="shot" src="../assets/manual/m-live-hand.png" alt="实时页" style="width:86%;margin:0 auto">
+  <div class="cap">实时页（课堂模式，示例数据“全手抓握”）</div>
+  <table>
+    <tr><th style="width:24%">区域</th><th>怎么看</th></tr>
+    <tr><td>手掌图（左）</td><td>每个圆点就是一个感应点。颜色 <span class="legend"></span> 由暗到红表示越来越大；圆点外圈的弧长 = 当前值占“色标上限”的比例，<b>白点 = 峰值</b>；新按下的点会冒出一圈扩散波纹。</td></tr>
+    <tr><td>受力中心 ⊕</td><td>25 个点按读数加权算出的位置，拖尾显示最近 1.6 秒的移动。只反映采样点分布，不是整手合力的作用点。</td></tr>
+    <tr><td>三维手（中）</td><td>强脑 Revo2 灵巧手模型，零件按受力着色，可拖动旋转，下方切换掌面/侧面/手背。<b>手指弯曲由受力推算，仅示意</b>，软件不控制真实机械手。电脑不支持 OpenGL 时自动改为二维示意。</td></tr>
+    <tr><td>选中点（右上）</td><td>在手掌上点一个圆点（或按 <kbd>←</kbd> <kbd>→</kbd>），显示它的当前值、峰值和量条。</td></tr>
+    <tr><td>近 20 秒曲线</td><td>选中点的变化过程，橙色虚线是峰值。</td></tr>
+    <tr><td>各区受力占比</td><td>五指和掌部各占多少，最大的一项高亮为橙色。只比较分布，不代表力气大小。</td></tr>
+    <tr><td>底部状态栏</td><td>帧率、有效帧、校验错误。正常时约 20 帧/秒、校验错误为 0。</td></tr>
+  </table>
+  <div class="two">
+    <div style="flex:0 0 46%"><img class="shot" src="../assets/manual/m-live-data.png" alt="数据网格"></div>
+    <div>
+      <h3 style="margin-top:0">“数据”标签</h3>
+      <p>把 25 个数值按“手指列 × 指段行 + 掌部行”排成表格，按同一色标着色；底部显示接触点数、最大点、主要用力区域和所选点峰值。适合让学生抄数据、做对比。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 课堂操作 -->
+<section class="page">
+  <h2>4　课堂常用操作</h2>
+  <table>
+    <tr><th style="width:20%">按钮</th><th style="width:12%">快捷键</th><th>作用与注意</th></tr>
+    <tr><td><b>空载归零</b></td><td><kbd>Z</kbd></td><td>先<b>完全松手</b>，再点它：把当前读数设为零点，重新开始曲线和峰值。之后可选“归零后”显示；归零后的数值可能为负，用来观察零点漂移。抓握过程中不要归零。</td></tr>
+    <tr><td><b>冻结画面</b></td><td><kbd>空格</kbd></td><td>定格画面方便讲解；<b>采集和记录不会停</b>。再按一次恢复最新值。</td></tr>
+    <tr><td><b>清峰值</b></td><td><kbd>P</kbd></td><td>以当前值为起点重新统计峰值，只影响当前这只手。</td></tr>
+    <tr><td><b>● 记录</b></td><td>—</td><td>选择保存位置后开始记录，按钮变红并计时；再点停止。关闭程序也会自动保存。</td></tr>
+    <tr><td><b>回放</b></td><td>—</td><td>打开以前记录的 <code>channels.csv</code>，可播放/暂停、0.5/1/2 倍速、拖动进度。</td></tr>
+    <tr><td><b>原始值 / 归零后 / 标定当量</b></td><td>—</td><td>切换显示方式；记录文件始终保存厂家原始值。“标定当量”需要先在标定页完成标定。</td></tr>
+    <tr><td><b>课堂 / 研究</b></td><td>—</td><td>课堂模式只显示“实时、实验”两页，按钮少；研究模式增加“分析、标定”。</td></tr>
+    <tr><td><b>设置</b></td><td>—</td><td>量程登记（2/5/10 kg/点）、色标上限、只读参数查询。色标上限只改颜色，不改数值。</td></tr>
+    <tr><td><b>全屏</b></td><td><kbd>F11</kbd></td><td>投影时使用，<kbd>Esc</kbd> 退出。</td></tr>
+  </table>
+  <h3>记录文件</h3>
+  <table>
+    <tr><th style="width:28%">文件</th><th>内容</th></tr>
+    <tr><td><code>channels.csv</code></td><td>电脑接收时间、左右手、25 路原始 g 和零点，可用 Excel 打开</td></tr>
+    <tr><td><code>session.json</code></td><td>数据来源、量程、归零等操作事件；回放时用来恢复设置</td></tr>
+    <tr><td><code>valid_frames.bin</code> / <code>received_bytes.bin</code></td><td>原始串口数据，供复查</td></tr>
+  </table>
+  <div class="tip"><b>课堂小流程（10 分钟）：</b>教师示范连接 → 学生逐点轻按找编号 → 对同一点轻按、重按比较峰值 → 握软球 5 秒观察保持与松手回零 → 换海绵、握柄比较受力分布。学生记录“哪个点、最大值、保持时变化、松手后是否回零”。</div>
+</section>
+
+<!-- 5 引导实验 -->
+<section class="page">
+  <h2>5　引导实验</h2>
+  <img class="shot" src="../assets/manual/m-experiment.png" alt="实验页">
+  <div class="cap">实验页：左侧选实验，中间大字提示当前步骤，右侧显示结果</div>
+  <ol class="steps">
+    <li>在实时页先连接串口（或打开示例），再切到顶部 <b>实验</b> 页。</li>
+    <li>左侧选择实验和手，点 <b>开始实验</b>。第一步会要求松手，程序自动空载归零。</li>
+    <li>按中间的大字提示操作；达到阈值和时长后自动进入下一步。某一步实在做不了可点 <b>跳过此步</b>。</li>
+    <li>结束后结论显示在右侧，原始数据自动保存到 <code>文档\G0505M实验数据\日期_实验名\</code>，附 <code>experiment.json</code>。</li>
+  </ol>
+  <table>
+    <tr><th style="width:22%">实验</th><th style="width:38%">目的</th><th>观察要点</th></tr>
+    <tr><td>逐点核对</td><td>确认 25 个点的编号、位置和左右手对应</td><td>按到哪一点，画面上就是那一点；按错点会提示</td></tr>
+    <tr><td>轻重对比</td><td>同一位置轻按与重按的差异和重复性</td><td>峰值随用力变化；多次重复的分散程度</td></tr>
+    <tr><td>持续抓握与回零</td><td>观察压阻材料在持续受力下的漂移和松手后的残留</td><td>保持阶段读数是否慢慢变化；松手后是否回到 0</td></tr>
+    <tr><td>不同物体抓握</td><td>比较不同物体的接触分布</td><td>比较“哪里受力”，而不是比较力气大小</td></tr>
+  </table>
+  <div class="note">示例数据下也能走完实验流程，但结论会注明“不能作为实物测量证据”。</div>
+</section>
+
+<!-- 6 研究模式 -->
+<section class="page">
+  <h2>6　研究模式：分析与标定</h2>
+  <p>点顶部 <b>研究</b> 后出现“分析”“标定”两页。</p>
+  <h3>6.1　数据分析</h3>
+  <img class="shot" src="../assets/manual/m-analysis.png" alt="分析页">
+  <div class="cap">分析页：2026-10-16 实物记录，自动切分出 21 号点（掌部）6 次按压</div>
+  <p>点 <b>打开记录</b> 选择一份或多份 <code>channels.csv</code> 叠加比较。按“40 g 开始 / 20 g 结束”自动切分每次按压，列出峰值、达峰时间、保持均值、漂移率和松手残留，并计算重复性 CV。可 <b>导出指标 CSV</b> 和 <b>导出图片</b>。保持不足 0.5 秒时不评价漂移，相邻按压间隔太短时不评价残留（显示 --）。</p>
+  <div class="note">CV 包含了人手用力本身的差异，不能直接当作传感器重复性。要单独评价传感器，请用下面的砝码标定。</div>
+</section>
+
+<section class="page">
+  <h3 style="margin-top:0">6.2　已知载荷标定</h3>
+  <img class="shot" src="../assets/manual/m-calibration.png" alt="标定页">
+  <div class="cap">标定页</div>
+  <ol class="steps">
+    <li>先在“设置”中通过参数查询或订单<b>登记量程</b>；未登记时不能标定。</li>
+    <li>选择手、感应点，填写压头直径和砝码序列（必须包含 0 g），设定加载轮数（建议 2 轮以上）。</li>
+    <li>点 <b>开始标定</b>，按提示放上对应砝码，放稳后点 <b>已放好，开始采集</b>。软件等 3 秒稳定再取 2 秒均值，波动过大会要求重测。</li>
+    <li>完成后得到斜率、截距、R²、最大误差、迟滞和重复性，可 <b>保存</b>，并 <b>在实时页启用</b>“标定当量”显示。</li>
+  </ol>
+  <div class="warn">
+    <b>标定边界：</b>用与感应点同尺寸的<b>平底刚性压头</b>，垂直、居中压在单个感应点上再放砝码——<b>手按不是标定</b>。载荷不得超过登记量程的 80%（软件会拒绝）。只能使用串口实物数据，示例和回放数据会被拒绝。<br>
+    结果称为“标定当量 g”，只对该压头面积和加载方式有效，不代表整手握力，也不换算成牛顿或帕斯卡。
+  </div>
+</section>
+
+<!-- 7 故障排查 -->
+<section class="page">
+  <h2>7　常见问题排查</h2>
+  <table>
+    <tr><th style="width:28%">现象</th><th style="width:32%">可能原因</th><th>处理</th></tr>
+    <tr><td>下拉框显示“未发现串口”</td><td>USB 未插好；CH340 驱动未装</td><td>换 USB 口后点 ↻；在设备管理器查看；安装转换器驱动（便携包不自动装驱动）</td></tr>
+    <tr><td>已连接，但一直“等待该手有效帧”，接收字节为 0</td><td>TX/RX 没有交叉；GND 未共地；采集器未供电</td><td>断电重新核对第 2 章接线。字节为 0 表示数据没到电脑，<b>不代表受力为 0</b></td></tr>
+    <tr><td>只有另一只手有数据</td><td>采集器设为右手（或左手）</td><td>点左下角切换左手/右手；这不是故障</td></tr>
+    <tr><td><b>有数据、帧率正常，但 25 点一直是 0</b></td><td>没按在感应点上；FPC 排线方向反了或不是反向排线；排线未插到底、锁扣未扣</td><td>先按住圆形感应区 2 秒；仍为 0 则<b>断电</b>，按连接器金属触点核对排线方向、插深和锁扣。软件 8 秒后会自动提示这一项</td></tr>
+    <tr><td>显示“数据过期 · 保留最后值”</td><td>超过 1 秒没有新数据：USB 松动、线缆干扰</td><td>检查 USB 线；拔插后重新点“连接”</td></tr>
+    <tr><td>校验错误持续增加</td><td>波特率不对、线缆过长或干扰</td><td>确认 115200 8N1；缩短 TTL 连线</td></tr>
+    <tr><td>松手后读数不回 0</td><td>压阻材料的迟滞与残留，属正常现象</td><td>等待几秒或点“空载归零”；这正是“持续抓握与回零”实验要观察的内容</td></tr>
+    <tr><td>三维手不显示</td><td>电脑不支持 OpenGL（如远程桌面、老显卡）</td><td>软件会自动改用二维示意，其他功能不受影响</td></tr>
+    <tr><td>双击后没有窗口</td><td>没有完整解压，或缺少 <code>_internal</code></td><td>把整个压缩包解压到本地磁盘后再运行</td></tr>
+  </table>
+  <p class="small">排查时请勿点击厂家软件中的“零点标定”“清除零点”“设置量程”等会写入设备的按钮；本教具只发送只读查询 <code>SET=?</code>，不会修改采集器设置。</p>
+</section>
+
+<!-- 8 安全与参数 -->
+<section class="page compact">
+  <h2>8　安全、参数与文件说明</h2>
+  <h3>使用安全</h3>
+  <ul>
+    <li>不要用尖锐、坚硬的物体顶压感应片；不要猛烈挤压、弯折或拉扯排线。</li>
+    <li>插拔排线、改接线前先断电。不要把两路 5 V 电源同时接到采集器。</li>
+    <li>标定载荷不超过量程的 80%，砝码放稳、不要冲击加载。</li>
+    <li>手套保持干燥，用后平放保存，避免排线根部反复折弯。</li>
+  </ul>
+  <h3>技术参数</h3>
+  <table>
+    <tr><th style="width:32%">项目</th><th>数值</th></tr>
+    <tr><td>感应点</td><td>25 点压阻阵列（五指各 4 点 + 掌部 5 点）</td></tr>
+    <tr><td>量程</td><td>2 / 5 / 10 kg 每点三种版本（本机实测查询为 5 kg/点）</td></tr>
+    <tr><td>输出</td><td>厂家估算值，单位 g，0–65535</td></tr>
+    <tr><td>上报周期</td><td>最快 20 ms/帧；本机设为 50 ms（约 20 帧/秒）</td></tr>
+    <tr><td>串口</td><td>115200 bps，8N1；53 字节帧，0x40 帧头，0x31/0x32 左右手，25 个大端 uint16，和校验</td></tr>
+    <tr><td>厂家标称</td><td>重复性 ±8%，迟滞 &lt; 6%，漂移 &lt; 8%（不是全条件准确度承诺）</td></tr>
+    <tr><td>软件运行环境</td><td>Windows 10 1809 及以上 / Windows 11，64 位；免安装</td></tr>
+  </table>
+  <h3>便携包内容</h3>
+  <table>
+    <tr><th style="width:38%">文件</th><th>说明</th></tr>
+    <tr><td><code>启动G0505M教具.cmd</code> / <code>G0505MTeaching.exe</code></td><td>启动程序（两者等效）</td></tr>
+    <tr><td><code>_internal\</code></td><td>运行库，<b>不能删除</b></td></tr>
+    <tr><td><code>G0505M手掌受力教具使用说明书-v2.0.pdf</code></td><td>本说明书</td></tr>
+    <tr><td><code>G0505M桌角卡-v2.0.pdf</code></td><td>A4 一页 8 张的快速上手卡，裁切后放在每张桌角</td></tr>
+    <tr><td><code>接线与编号图\</code></td><td>厂家接线图与编号图</td></tr>
+    <tr><td><code>使用说明.md</code>、<code>验证结果.md</code>、<code>*.json</code></td><td>详细文字说明与软件、实物检查记录</td></tr>
+    <tr><td><code>G0505M教具源码-v2.0.0.zip</code></td><td>源码包</td></tr>
+  </table>
+  <p class="small">厂家资料：https://hcn2yloo448w.feishu.cn/wiki/EsALwFJ3timvKGkic4ZcXth9nvg 。编号图与接线图为厂家公开文档截图，版权归原作者，仅用于配套教学核对。三维手模型来自 BrainCo Revo2（Apache-2.0），来源见 <code>_internal\grip_teaching\assets\revo2\NOTICE.md</code>。</p>
+</section>
+
+</body>
+</html>

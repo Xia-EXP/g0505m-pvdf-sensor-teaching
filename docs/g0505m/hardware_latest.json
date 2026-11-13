@@ -1,0 +1,81 @@
+{
+  "checked_at": "2026-10-11T15:35:32.712095",
+  "port": "COM3",
+  "ports": [
+    {
+      "port": "COM3",
+      "description": "USB-SERIAL CH340 (COM3)",
+      "vid": 6790,
+      "pid": 29987
+    }
+  ],
+  "duration_seconds": 15.047,
+  "stats": {
+    "received_bytes": 15901,
+    "valid_frames": 300,
+    "checksum_errors": 0,
+    "invalid_hand": 0,
+    "discarded_bytes": 0
+  },
+  "hands": [
+    "R"
+  ],
+  "first_values_g": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "last_values_g": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "first_frame_hex": "40 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72",
+  "failure": null,
+  "full_hardware_acceptance": false,
+  "recording": "C:\\Users\\ROG\\Documents\\ChatGPT\\压力传感器\\release\\G0505M实物接收检查_20261011_153517"
+}

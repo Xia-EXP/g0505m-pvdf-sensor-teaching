@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-16T00:44:53.420748",
+  "port": "COM3",
+  "ports": [
+    {
+      "port": "COM4",
+      "description": "USB-SERIAL CH340 (COM4)",
+      "vid": 6790,
+      "pid": 29987
+    }
+  ],
+  "duration_seconds": 0.0,
+  "stats": {
+    "received_bytes": 0,
+    "valid_frames": 0,
+    "checksum_errors": 0,
+    "invalid_hand": 0,
+    "discarded_bytes": 0
+  },
+  "hands": [],
+  "first_values_g": null,
+  "last_values_g": null,
+  "first_frame_hex": null,
+  "peaks_by_hand_g": {},
+  "nonzero_frames_by_hand": {},
+  "first_nonzero_received_ns": null,
+  "last_nonzero_received_ns": null,
+  "failure": "could not open port 'COM3': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)",
+  "full_hardware_acceptance": false,
+  "recording": "C:\\Users\\ROG\\Documents\\ChatGPT\\压力传感器\\release\\G0505M实物接收检查_20261016_004453"
+}

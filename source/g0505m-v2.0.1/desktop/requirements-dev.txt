@@ -1,0 +1,5 @@
+# 开发依赖：在运行时依赖基础上增加测试和 Windows 打包工具。
+-r requirements.txt
+pytest>=8.2,<9
+pyinstaller>=6.8,<7
+ruff>=0.13,<0.14

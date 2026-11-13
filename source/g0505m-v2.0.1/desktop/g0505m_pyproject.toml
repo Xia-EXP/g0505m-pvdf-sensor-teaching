@@ -1,0 +1,28 @@
+# 作用：源码交付包使用独立项目元数据，不依赖原 PVDF 包的入口。
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "g0505m-grip-teaching"
+version = "2.0.1"
+description = "GT-G0505M 手掌受力可视化教具"
+requires-python = ">=3.12,<3.14"
+dependencies = ["numpy>=1.26,<3", "PySide6>=6.7,<7", "pyqtgraph>=0.13.7,<0.15", "pyserial>=3.5,<4", "PyOpenGL>=3.1.7,<4"]
+
+[project.scripts]
+g0505m-teaching = "grip_teaching.app:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# 作用：源码安装时一并带上强脑 Revo2 的 URDF、STL 和 Apache-2.0 许可证。
+[tool.setuptools.package-data]
+grip_teaching = ["assets/revo2/LICENSE", "assets/revo2/NOTICE.md", "assets/revo2/urdf/*.urdf", "assets/revo2/meshes/*/*.STL"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
