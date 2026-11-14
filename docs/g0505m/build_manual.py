@@ -122,7 +122,7 @@ def main() -> None:
         ("测量限制", "重复性±8%、迟滞＜6%、漂移＜8%；不能直接宣称精密测力"),
     ], [3.3, 14.1])
     paragraph(document, "25个位置没有覆盖整只手的所有接触区域，因此采样点合计不能叫完整整手握力；未测区域不插值成真实压力。定量比较需固定夹具、载荷、手姿和接触面积。", True)
-    paragraph(document, f"实物结果：修正错接线后，COM3在{hardware['duration_seconds']:.3f}秒收到{hardware['stats']['valid_frames']}个有效右手帧，校验错误{hardware['stats']['checksum_errors']}。首次检查首尾25路均为0，尚不足以证明按压响应和安装位置。")
+    paragraph(document, f"实物结果：修正错接线后，COMx在{hardware['duration_seconds']:.3f}秒收到{hardware['stats']['valid_frames']}个有效右手帧，校验错误{hardware['stats']['checksum_errors']}。首次检查首尾25路均为0，尚不足以证明按压响应和安装位置。")
     paragraph(document, "厂家资料来自洛阳冠拓电子科技有限公司公开配套手册。编号见2.5节，串口接线见3.6节，协议见5.1节。")
     paragraph(document, URL)
 
@@ -141,7 +141,7 @@ def main() -> None:
     paragraph(document, "本说明使用串口版。蓝牙版的USB充电限制和内置电池规则不能与串口版供电接法混用。")
 
     next_page(document, "首次启动与实物连接")
-    picture(document, "ui-real-hardware.png", "真实COM3接收截图，右手帧，图中数值为0；只读查询登记5kg版本与50ms周期")
+    picture(document, "ui-real-hardware.png", "真实COMx接收截图，右手帧，图中数值为0；只读查询登记5kg版本与50ms周期")
     paragraph(document, "1. 完整解压便携ZIP，双击启动G0505M教具.cmd或G0505MTeaching.exe；_internal必须与EXE同目录。其他电脑无需Python，串口驱动由设备厂家或学校管理员安装。")
     paragraph(document, "2. 选择实际USB转TTL端口，点击连接。首个有效帧会自动展示其左/右手标识，之后可以手动切换。每只手分别保存零点、曲线与峰值。")
     paragraph(document, "3. 点击参数查询，只发SET=?。明确的型号回复可以登记量程；未知回复保持未确认。不会发送修改量程、周期或左右手的指令。")
@@ -220,3 +220,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

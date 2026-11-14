@@ -75,7 +75,7 @@ img('vendor-fpc-adapter.png', 145*mm)
 img('wiring-section-top.png', 145*mm)
 P('建议首次实验使用软球、海绵块或圆滑握柄。尖锐物体、猛烈挤压和局部折叠会改变膜片受力，也可能损坏感应层。采集器固定在手臂外侧，避免外壳被手掌直接顶压。')
 H('4. 打开上位机',1)
-bullets(['完整解压厂家软件或项目便携包，保持 EXE 与 _internal 文件夹同目录。','在设备管理器确认 USB-TTL 实际串口号；本机曾识别为 CH340/COM3，其他电脑编号可能不同。','上位机选择对应端口，波特率设为115200，打开串口后观察周期数据。','有字节但无有效帧时，检查 8N1、TX/RX 交叉和共地；接收字节为0时，优先检查供电、线序和驱动。'])
+bullets(['完整解压厂家软件或项目便携包，保持 EXE 与 _internal 文件夹同目录。','在设备管理器确认 USB-TTL 实际串口号；本机曾识别为 CH340/COMx，其他电脑编号可能不同。','上位机选择对应端口，波特率设为115200，打开串口后观察周期数据。','有字节但无有效帧时，检查 8N1、TX/RX 交叉和共地；接收字节为0时，优先检查供电、线序和驱动。'])
 img('ui-real-hardware.png', 145*mm)
 story.append(PageBreak())
 
@@ -103,3 +103,5 @@ OUT.parent.mkdir(parents=True, exist_ok=True)
 doc=SimpleDocTemplate(str(OUT), pagesize=A4, rightMargin=18*mm, leftMargin=18*mm, topMargin=16*mm, bottomMargin=17*mm, title='GT-G0505M 手掌抓握力传感器教程', author='OpenAI')
 doc.build(story, onFirstPage=footer, onLaterPages=footer)
 print(OUT)
+
+

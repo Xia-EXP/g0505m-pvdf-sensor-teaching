@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-10-11T16:07:59.549280",
-  "port": "COM3",
+  "port": "COMx",
   "duration_seconds": 1800.063,
   "target_seconds": 1800.0,
   "completed_duration": true,
@@ -52,7 +52,7 @@
     "真实USB拔插",
     "夹具定量误差"
   ],
-  "recording": "C:\\Users\\ROG\\Documents\\ChatGPT\\压力传感器\\release\\G0505M30分钟实物记录_20261011_153759",
+  "recording": "<local-project-path>\\release\\G0505M30分钟实物记录_20261011_153759",
   "recording_audit": {
     "csv_frames": 33222,
     "recorded_duration_seconds": 1659.84989,
@@ -77,3 +77,4 @@
   "continuous_serial_pass": false,
   "stats_scope": "final_parser_only"
 }
+

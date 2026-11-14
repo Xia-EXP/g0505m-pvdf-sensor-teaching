@@ -1,7 +1,8 @@
-# 运行时依赖：版本范围与 pyproject.toml 保持一致，便于课堂电脑直接安装。
+# Runtime dependencies; keep versions aligned with pyproject.toml.
 numpy>=1.26,<3
 PySide6>=6.7,<7
 pyqtgraph>=0.13.7,<0.15
 pyserial>=3.5,<4
-# 作用：强脑 Revo2 三维手的 OpenGL 渲染；缺失时程序自动回退 2D 示意手。
+# Optional OpenGL rendering for the Revo2 hand; the app falls back to 2D.
 PyOpenGL>=3.1.7,<4
+

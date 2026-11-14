@@ -1,10 +1,10 @@
 {
   "checked_at": "2026-10-11T16:52:52.508828",
-  "port": "COM3",
+  "port": "COMx",
   "ports": [
     {
-      "port": "COM3",
-      "description": "USB-SERIAL CH340 (COM3)",
+      "port": "COMx",
+      "description": "USB-SERIAL CH340 (COMx)",
       "vid": 6790,
       "pid": 29987
     }
@@ -111,5 +111,6 @@
   "last_nonzero_received_ns": null,
   "failure": null,
   "full_hardware_acceptance": false,
-  "recording": "C:\\Users\\ROG\\Documents\\ChatGPT\\压力传感器\\release\\G0505M实物接收检查_20261011_165207"
+  "recording": "<local-project-path>\\release\\G0505M实物接收检查_20261011_165207"
 }
+
